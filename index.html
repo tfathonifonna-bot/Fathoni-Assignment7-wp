@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathoni kuyy Digital Library | Premium Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="noise-bg"></div>
+    <header>
+        <div class="logo"><i class="ph-bold ph-books"></i>DIGITAL<span> LIB UMSU</span></div>
+        <nav>
+            <ul>
+                <li><a href="#koleksi">Catalog</a></li>
+                <li><a href="#pinjam">Borrow</a></li>
+                <li><button id="theme-toggle" class="theme-btn"><i class="ph-bold ph-sun sun-icon"></i><i class="ph-bold ph-moon moon-icon"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Eksplorasi Ilmu<br> Tanpa Batas</h1>
+                <p>Koleksi literatur digital pilihan para ahli untuk masa depan gemilang.</p>
+                <a href="#koleksi" class="btn-primary">Mulai Eksplorasi <i class="ph ph-arrow-right"></i></a>
+            </div>
+        </section>
+        <section id="koleksi" class="container">
+            <div class="section-header">
+                <h2>Koleksi Buku Terkini</h2>
+                <div class="admin-controls">
+                    <input type="text" id="newTitle" placeholder="Judul buku...">
+                    <input type="text" id="newType" placeholder="Kategori...">
+                    <button onclick="addItem()" class="btn-add">Tambah</button>
+                </div>
+            </div>
+            <div class="card-container" id="book-list"></div>
+        </section>
+        <section id="pinjam" class="container">
+            <div class="glass-form-wrapper">
+                <div class="form-content">
+                    <h2>Formulir Peminjaman</h2>
+                    <form id="loanForm">
+                        <div class="input-group">
+                            <input type="text" id="nama" placeholder=" " required>
+                            <label>Nama Lengkap</label>
+                            <small class="error-msg" id="errNama"></small>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label>Email Mahasiswa</label>
+                            <small class="error-msg" id="errEmail"></small>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" id="durasi" placeholder=" " required>
+                            <label>Durasi Pinjam (Hari)</label>
+                            <small class="error-msg" id="errDurasi"></small>
+                        </div>
+                        <button type="submit" class="btn-submit">Konfirmasi Pinjaman</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 <span>Fariz</span> | Digital Library Experience</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
