@@ -1,0 +1,123 @@
+:root {
+    --bg-main: #f0f4f8;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --primary: #0ea5e9;
+    --accent: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
+    --border: rgba(0, 0, 0, 0.05);
+}
+
+/* --- PERBAIKAN BAGIAN HERO (HEADING UTAMA) --- */
+.hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 60vh; 
+    padding: 0 10%; 
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memaksa semua isi ke tengah */
+    text-align: center;
+    max-width: 800px;
+    gap: 15px; /* Memberi jarak antar elemen */
+}
+
+.hero-content h1 { 
+    font-size: 3.5rem; 
+    font-weight: 800; 
+    line-height: 1.2; 
+    background: var(--accent); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.hero-content p { 
+    color: var(--text-muted); 
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.badge { 
+    background: rgba(14, 165, 233, 0.1); 
+    color: var(--primary); 
+    padding: 8px 20px; 
+    border-radius: 50px; 
+    font-size: 0.9rem; 
+    font-weight: 600; 
+}
+
+/* --- PERBAIKAN BAGIAN INPUT TAMBAH BUKU --- */
+.section-header { 
+    display: flex; 
+    flex-direction: column; /* Membuat judul dan input tersusun atas-bawah */
+    align-items: center; /* Membawa ke tengah */
+    gap: 20px; /* Jarak antara judul dan kolom input */
+    margin-bottom: 50px; 
+    text-align: center;
+}
+
+.admin-controls { 
+    display: flex; 
+    gap: 15px; 
+    flex-wrap: wrap; /* Agar rapi di layar kecil */
+    justify-content: center;
+}
+
+.admin-controls input {
+    background: var(--bg-card); 
+    border: 1px solid var(--border); 
+    color: var(--text-main);
+    padding: 12px 20px; 
+    border-radius: 10px; 
+    outline: none;
+    width: 250px; /* Melebarkan sedikit kolom input */
+    font-size: 0.95rem;
+}
+
+.btn-add {
+    background: var(--primary); 
+    color: white; 
+    border: none;
+    padding: 12px 25px; 
+    border-radius: 10px; 
+    font-weight: 600; 
+    cursor: pointer;
+}
+
+.dark-theme {
+    --bg-main: #0b1120;
+    --bg-card: #111827;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.4s, color 0.4s; }
+body { background-color: var(--bg-main); color: var(--text-main); }
+.container { padding: 60px 10%; }
+
+header { display: flex; justify-content: space-between; padding: 20px 10%; background: var(--bg-card); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+.logo span { background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+
+nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+.theme-btn { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border); cursor: pointer; background: var(--bg-main); color: var(--text-main); }
+
+.sun-icon { display: none; }
+.dark-theme .sun-icon { display: block; margin: auto; }
+.dark-theme .moon-icon { display: none; }
+
+.card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.card { background: var(--bg-card); width: 250px; padding: 25px; border-radius: 20px; border: 1px solid var(--border); text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+
+@media (max-width: 768px) { .card-container { flex-direction: column; align-items: center; } }
+
+.glass-form-wrapper { background: var(--bg-card); padding: 40px; border-radius: 25px; max-width: 500px; margin: auto; border: 1px solid var(--border); }
+.input-group { position: relative; margin-bottom: 25px; border-bottom: 2px solid var(--border); }
+.input-group input { width: 100%; padding: 10px 0; background: transparent; border: none; color: var(--text-main); outline: none; }
+.btn-submit { width: 100%; padding: 15px; border: none; border-radius: 10px; background: var(--accent); color: rgb(7, 5, 5); font-weight: 700; cursor: pointer; }
+.error-msg { color: #e108ec; font-size: 0.7rem; }
